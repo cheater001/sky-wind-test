@@ -1,0 +1,43 @@
+.parking
+  padding: 20px
+
+  .info
+    padding-bottom: 10px
+
+    strong
+      color: green
+
+  .actions
+    padding-bottom: 10px
+    border-bottom: 1px solid black
+
+  .empty
+    padding-top: 10px
+
+.place
+  float: left
+  margin: 10px
+  padding: 5px
+  box-sizing: border-box
+  width: 100px
+  height: 100px
+  border-style: solid
+  border-width: 1px
+  font-size: 10px
+  cursor: pointer
+
+  &.disabled
+    border-color: darkgray
+    background-color: lightgray
+
+  &.sedan
+    border-color: darkgreen
+    background-color: lightgreen
+
+  &.truck
+    border-color: darkblue
+    background-color: lightblue
+
+  h3
+    margin: 0 0 10px
+    font-size: 12px

@@ -1,0 +1,7 @@
+<div class="place" ng-class="place.name">
+    <h3>Name: {{ place.name }}</h3>
+    <div ng-show="place.car">
+        <h3 class="text-danger">Occupied by {{ place.car.type }}</h3>
+        <button class="btn btn-default btn-sm" ng-click="clear(place)">Clear</button>
+    </div>
+</div>

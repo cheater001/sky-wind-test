@@ -1,0 +1,22 @@
+<div class="parking">
+    <div class="info" ng-show="map">
+        Total places: <strong>{{ total }}</strong>, Free: <strong>{{ free }}</strong>, Occupied: <strong>{{ occupied }}</strong>
+    </div>
+    <div class="actions form-inline">
+        <button class="btn btn-default" ng-click="create()">Create new Map</button>
+        <button class="btn btn-default" ng-click="park()" ng-disabled="!free">Park a random Car</button>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="disabled/truck/sedan" ng-model="type">
+            <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="parkMyCar(type)" ng-disabled="!free || !type">Park my Car</button>
+            </span>
+        </div>
+    </div>
+
+    <div class="places" place
+         ng-repeat="place in map"
+         ng-click="onPlaceClick(place)"></div>
+    <div ng-hide="map" class="empty">
+        No parking map available, please <button class="btn btn-sm btn-default" ng-click="create()">create one</button>.
+    </div>
+</div>
